@@ -32,9 +32,10 @@ int main(){
         cout << "Which cell to mark? i:[1..3], j:[1..3 ]: "; 
         cin >> i >> j;
         if (turn == false)
-            game[i][j] = 'X';
+            # bug1
+            game[i-1][j-1] = 'X';
         else
-            game[i][j] = 'O';
+            game[i-1][j-1] = 'O';
         if (isWin(game)){
             cout << "Win!" << endl;
             break; // need to terminate the problem
@@ -47,4 +48,5 @@ int main(){
     cout << game[1][0] << " " << game[1][1] << " " << game[1][2] << endl;
     cout << game[2][0] << " " << game[2][1] << " " << game[2][2] << endl;
     return 0;
+    
 }
